@@ -1,0 +1,36 @@
+title: 'Open Graph Image'
+fields:
+  -
+    handle: og_image_template
+    field:
+      type: text
+      display: Template
+      instructions: 'The view to render. Leave blank to use the site default.'
+  -
+    handle: og_image_headline
+    field:
+      type: text
+      display: 'Headline override'
+  -
+    handle: og_image_subtitle
+    field:
+      type: text
+      display: 'Subtitle override'
+  -
+    handle: og_image_custom
+    field:
+      type: assets
+      max_files: 1
+      mode: list
+      display: 'Custom image'
+      instructions: 'Upload an image to use as is and bypass generation.'
+  -
+    handle: og_image_disabled
+    field:
+      type: toggle
+      display: 'Disable automatic generation'
+  -
+    handle: og_image_preview
+    field:
+      type: og_image_preview
+      display: Preview

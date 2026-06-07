@@ -1,0 +1,74 @@
+{
+    "name": "html2img/statamic-og-images",
+    "description": "Automatic Open Graph images for Statamic, rendered by HTML to Image.",
+    "type": "statamic-addon",
+    "keywords": [
+        "statamic",
+        "statamic-addon",
+        "open-graph",
+        "og-image",
+        "social-images",
+        "html2img",
+        "html-to-image",
+        "screenshot"
+    ],
+    "homepage": "https://html2img.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "html2img",
+            "email": "info@html2img.com",
+            "homepage": "https://html2img.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/html2img/statamic-og-images/issues",
+        "source": "https://github.com/html2img/statamic-og-images"
+    },
+    "autoload": {
+        "psr-4": {
+            "Html2img\\StatamicOgImages\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Html2img\\StatamicOgImages\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "html2img/html2img-php": "^1.0",
+        "statamic/cms": "^6.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^3.5",
+        "phpstan/phpstan": "^2.0"
+    },
+    "scripts": {
+        "test": "pest",
+        "stan": "phpstan analyse",
+        "lint": "pint --test",
+        "format": "pint"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Open Graph Images",
+            "description": "Automatic Open Graph images for Statamic, rendered by HTML to Image."
+        },
+        "laravel": {
+            "providers": [
+                "Html2img\\StatamicOgImages\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

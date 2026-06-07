@@ -1,0 +1,11 @@
+parameters:
+    level: 5
+    paths:
+        - src
+    treatPhpDocTypesAsCertain: false
+    ignoreErrors:
+        # Statamic's contracts deliberately omit many runtime methods that are
+        # provided by traits on the concrete classes (Entry, Collection,
+        # AssetContainer, QueryBuilder). These calls are valid at runtime.
+        - '#Call to an undefined method Statamic\\Contracts\\#'
+        - identifier: nullsafe.neverNull

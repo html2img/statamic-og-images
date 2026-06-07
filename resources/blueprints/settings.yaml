@@ -1,0 +1,113 @@
+tabs:
+  general:
+    display: General
+    sections:
+      -
+        fields:
+          -
+            handle: register
+            field:
+              type: section
+              display: 'Get started'
+              instructions: 'Need an API key? [Create one at app.html2img.com](https://app.html2img.com/register). The .env value `HTML2IMG_API_KEY` is the canonical source; the field below is an optional override stored outside version control.'
+          -
+            handle: api_key
+            field:
+              type: text
+              display: 'API key'
+              instructions: 'Optional. Leave blank to use the HTML2IMG_API_KEY environment variable.'
+          -
+            handle: default_template
+            field:
+              type: text
+              display: 'Default template'
+              default: 'og-images::default'
+              instructions: 'The view rendered into the image. Publish the bundled default and point this at your own view.'
+          -
+            handle: collections
+            field:
+              type: collections
+              display: 'Enabled collections'
+              instructions: 'Entries in these collections generate an image on save.'
+  image:
+    display: Image
+    sections:
+      -
+        fields:
+          -
+            handle: width
+            field:
+              type: integer
+              display: Width
+              default: 1200
+          -
+            handle: height
+            field:
+              type: integer
+              display: Height
+              default: 630
+          -
+            handle: dpi
+            field:
+              type: select
+              display: DPI
+              default: 2
+              options:
+                1: '1x'
+                2: '2x (retina)'
+                3: '3x'
+                4: '4x'
+          -
+            handle: default_image
+            field:
+              type: text
+              display: 'Fallback image URL'
+              instructions: 'Used by the tag when an entry has no generated image.'
+  output:
+    display: Output
+    sections:
+      -
+        fields:
+          -
+            handle: storage
+            field:
+              type: select
+              display: 'Storage mode'
+              default: cdn
+              options:
+                cdn: 'CDN URL (i.html2img.com)'
+                asset: 'Download into an asset container'
+          -
+            handle: asset_container
+            field:
+              type: asset_container
+              display: 'Asset container'
+              max_items: 1
+              instructions: 'Used when storage mode is set to asset.'
+          -
+            handle: integration
+            field:
+              type: select
+              display: 'Integration mode'
+              default: standalone
+              options:
+                standalone: 'Standalone ({{ og_image:meta }} tag)'
+                seo-addon: 'Write the URL into an SEO addon field'
+          -
+            handle: seo_field
+            field:
+              type: text
+              display: 'SEO addon field'
+              default: og_image
+              instructions: 'The field your SEO addon reads, used in SEO addon mode.'
+  preview:
+    display: Preview
+    sections:
+      -
+        fields:
+          -
+            handle: preview
+            field:
+              type: og_image_preview
+              display: 'Sample preview'
+              instructions: 'A live render of the default template at the configured dimensions.'
