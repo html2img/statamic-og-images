@@ -27,7 +27,21 @@ final class InjectOgImageFields
             return;
         }
 
-        $event->blueprint->ensureFieldsInTab($this->fields(), 'og_images');
+        $blueprint = $event->blueprint;
+
+        // Pre-create the tab with an explicit display so Statamic does not
+        // humanise the handle to "Og images".
+        $contents = $blueprint->contents();
+
+        if (! isset($contents['tabs']['og_images'])) {
+            $contents['tabs']['og_images'] = [
+                'display' => 'OG Images',
+                'sections' => [['fields' => []]],
+            ];
+            $blueprint->setContents($contents);
+        }
+
+        $blueprint->ensureFieldsInTab($this->fields(), 'og_images');
     }
 
     /**

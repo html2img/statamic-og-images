@@ -101,6 +101,21 @@ Once the design looks right, the **Generate** button on the publish screen runs
 a real render through the API and shows the actual PNG, the parity check between
 the browser preview and the rendered image.
 
+### Local development and public URLs
+
+Renders happen on the HTML to Image servers in real Chrome, so every URL in your
+template, web fonts, images and stylesheets, must be reachable from the public
+internet. In production your asset and font URLs already are, so the rendered
+image matches the browser preview.
+
+On a local development site this is not the case: a locally hosted image, such as
+an uploaded Statamic asset on `*.ddev.site` or `*.test`, is invisible to the API
+and shows as missing in the rendered PNG, even though your browser preview shows
+it. The remedy is to reference publicly hosted assets, or to expose your dev site
+with a tunnel (for example `cloudflared tunnel --url ...` or `ddev share`) and
+point `APP_URL` at the tunnel while you test. Web fonts loaded from a public CDN,
+such as Google Fonts, always work because they are already public.
+
 ## Configuration
 
 `config/statamic-og-images.php`:
