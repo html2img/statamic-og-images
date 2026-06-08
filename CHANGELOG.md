@@ -5,6 +5,19 @@ All notable changes to this addon are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-06-08
+
+### Added
+
+- A prominent connection-status banner on the settings screen and on each
+  enabled entry's OG Images tab, warning clearly when no API key is configured
+  and linking to where a free key can be created.
+
+### Changed
+
+- Surface the free-API-key requirement at the top of the readme so it is clear
+  in the syndicated marketplace listing.
+
 ## [1.0.1] - 2026-06-08
 
 ### Changed
@@ -30,5 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The `og:generate` command for bulk regeneration.
 - Optional asset localisation into a Statamic asset container.
 
+[1.0.2]: https://github.com/html2img/statamic-og-images/releases/tag/v1.0.2
 [1.0.1]: https://github.com/html2img/statamic-og-images/releases/tag/v1.0.1
 [1.0.0]: https://github.com/html2img/statamic-og-images/releases/tag/v1.0.0

@@ -49,7 +49,19 @@ final class InjectOgImageFields
      */
     private function fields(): array
     {
-        return [
+        $fields = [];
+
+        // Surface a prominent warning right where editors work when the addon
+        // can't generate anything yet. Omitted once a key is configured so the
+        // tab stays clean.
+        if (! $this->settings->hasApiKey()) {
+            $fields['og_image_status'] = [
+                'type' => 'og_image_status',
+                'hide_display' => true,
+            ];
+        }
+
+        return $fields + [
             Fields::TEMPLATE => [
                 'type' => 'text',
                 'display' => 'Template',

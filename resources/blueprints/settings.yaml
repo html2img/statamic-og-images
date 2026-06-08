@@ -5,17 +5,16 @@ tabs:
       -
         fields:
           -
-            handle: register
+            handle: status
             field:
-              type: section
-              display: 'Get started'
-              instructions: 'Need an API key? [Create one at app.html2img.com](https://app.html2img.com/register). The .env value `HTML2IMG_API_KEY` is the canonical source; the field below is an optional override stored outside version control.'
+              type: og_image_status
+              hide_display: true
           -
             handle: api_key
             field:
               type: text
               display: 'API key'
-              instructions: 'Optional. Leave blank to use the HTML2IMG_API_KEY environment variable.'
+              instructions: 'Optional override. The `HTML2IMG_API_KEY` environment variable is the canonical source; a value here is stored outside version control. [Create a free key at app.html2img.com](https://app.html2img.com/register).'
           -
             handle: default_template
             field:

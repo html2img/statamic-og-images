@@ -8,6 +8,7 @@ use GuzzleHttp\ClientInterface;
 use Html2img\Html2imgClient;
 use Html2img\StatamicOgImages\Console\GenerateCommand;
 use Html2img\StatamicOgImages\Fieldtypes\OgImagePreview;
+use Html2img\StatamicOgImages\Fieldtypes\OgImageStatus;
 use Html2img\StatamicOgImages\Listeners\GenerateOnEntrySaved;
 use Html2img\StatamicOgImages\Listeners\InjectOgImageFields;
 use Html2img\StatamicOgImages\Rendering\OgImageGenerator;
@@ -30,6 +31,7 @@ class ServiceProvider extends AddonServiceProvider
 
     protected $fieldtypes = [
         OgImagePreview::class,
+        OgImageStatus::class,
     ];
 
     protected $commands = [

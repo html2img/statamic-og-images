@@ -6,6 +6,13 @@
 [![Packagist Version](https://img.shields.io/packagist/v/html2img/statamic-og-images)](https://packagist.org/packages/html2img/statamic-og-images)
 [![License](https://img.shields.io/packagist/l/html2img/statamic-og-images)](LICENSE)
 
+> ⚠️ **A free html2img API key is required.** This addon generates your Open Graph
+> images through the [HTML to Image](https://html2img.com) API, so it needs a key
+> to render anything. Creating an account is free and includes a monthly allowance
+> of free credits that renews automatically — no purchase needed to get started.
+>
+> **→ [Get your free API key at app.html2img.com](https://app.html2img.com/register)**
+
 Automatic Open Graph (social share) images for your Statamic entries, rendered
 by the [HTML to Image](https://html2img.com) API in real Chrome. You design the
 card as an ordinary Statamic view with full CSS control, and the addon renders
@@ -31,7 +38,7 @@ exactly as they do in the browser. Built on the core
 
 - PHP 8.3 or newer
 - Statamic 6
-- A HTML to Image API key, free from your [dashboard](https://app.html2img.com/register)
+- A free HTML to Image API key — [create one](https://app.html2img.com/register); every account includes a monthly allowance of free credits
 
 ## Installation
 
