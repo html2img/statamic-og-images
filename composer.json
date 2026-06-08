@@ -37,7 +37,7 @@
     },
     "require": {
         "php": "^8.3",
-        "html2img/html2img-php": "^1.0",
+        "html2img/html2img-php": "^1.0.1",
         "statamic/cms": "^6.0"
     },
     "require-dev": {
