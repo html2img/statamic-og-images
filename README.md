@@ -8,8 +8,10 @@
 
 > ⚠️ **A free html2img API key is required.** This addon generates your Open Graph
 > images through the [HTML to Image](https://html2img.com) API, so it needs a key
-> to render anything. Creating an account is free and includes a monthly allowance
-> of free credits that renews automatically — no purchase needed to get started.
+> to render anything. Creating an account is free and includes 50 credits, no card
+> needed to get started. Images rendered on the free tier are hosted for 7 days;
+> on any paid plan they are hosted permanently, including everything you already
+> rendered before upgrading.
 >
 > **→ [Get your free API key at app.html2img.com](https://app.html2img.com/register)**
 
@@ -38,7 +40,7 @@ exactly as they do in the browser. Built on the core
 
 - PHP 8.3 or newer
 - Statamic 6
-- A free HTML to Image API key — [create one](https://app.html2img.com/register); every account includes a monthly allowance of free credits
+- A free HTML to Image API key ([create one](https://app.html2img.com/register)); every account starts with 50 free credits
 
 ## Installation
 
