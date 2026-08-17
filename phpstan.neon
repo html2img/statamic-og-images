@@ -8,4 +8,11 @@ parameters:
         # provided by traits on the concrete classes (Entry, Collection,
         # AssetContainer, QueryBuilder). These calls are valid at runtime.
         - '#Call to an undefined method Statamic\\Contracts\\#'
-        - identifier: nullsafe.neverNull
+        # Addon::get() is annotated as returning a non-nullable Addon, but it
+        # proxies to Collection::get(), which returns null for an unknown id.
+        # Our nullsafe calls are therefore correct, and whether PHPStan flags
+        # them depends on which Statamic release the CI matrix resolves. Without
+        # reportUnmatched the build fails on the versions that do not flag them.
+        -
+            identifier: nullsafe.neverNull
+            reportUnmatched: false
