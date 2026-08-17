@@ -205,7 +205,7 @@ npm install && npm run build   # Control Panel assets
 
 ## Links
 
-[Website](https://html2img.com) · [Documentation](https://html2img.com/docs) · [Laravel guide](https://html2img.com/integrations/laravel/) · [Templates](https://html2img.com/templates) · [Pricing](https://html2img.com/pricing) · [PHP SDK](https://github.com/html2img/html2img-php)
+[HTML to Image API](https://html2img.com) · [Screenshot API](https://html2img.com/screenshot-api/) · [HTML to PDF API](https://html2img.com/html-to-pdf/) · [Documentation](https://html2img.com/docs) · [Statamic guide](https://html2img.com/integrations/statamic/) · [Laravel guide](https://html2img.com/integrations/laravel/) · [Templates](https://html2img.com/templates) · [Pricing](https://html2img.com/pricing) · [PHP SDK](https://github.com/html2img/html2img-php)
 
 ## Licence
 
