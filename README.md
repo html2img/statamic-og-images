@@ -191,6 +191,17 @@ Synchronous renders have a 30 second budget. The generation job already runs off
 the request cycle, so this rarely matters, but for very large captures the API
 also supports [webhook delivery](https://html2img.com/docs/parameters/webhook-url).
 
+## Other official packages
+
+The same API has official packages for other languages and platforms, all available now:
+
+- **SDKs:** [PHP](https://github.com/html2img/html2img-php) · [JavaScript and TypeScript](https://github.com/html2img/html2img-js) · [Python](https://github.com/html2img/html2img-python) · [Ruby](https://github.com/html2img/html2img-ruby)
+- **Frameworks:** [Laravel](https://github.com/html2img/html2img-laravel) · [Django](https://github.com/html2img/html2img-django)
+- **CMS plugins:** [WordPress](https://wordpress.org/plugins/html2img/) · [Craft CMS](https://plugins.craftcms.com/og-images)
+- **Automation and AI:** [GitHub Action](https://github.com/marketplace/actions/html-to-image) · [MCP server](https://html2img.com/mcp/) (paid plans)
+
+There are also worked guides for [React](https://html2img.com/integrations/javascript/#react-and-nextjs) and [Vue](https://html2img.com/integrations/javascript/#vue-and-nuxt), and anything that can make an HTTP request works with the API. Every integration is listed on the [integrations hub](https://html2img.com/integrations/).
+
 ## Development
 
 This addon is developed inside a Statamic project using [ddev](https://ddev.com).
